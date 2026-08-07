@@ -90,7 +90,8 @@ and distributed through the OSF archive.
 
 ## Authors
 
-Sandy H. S. Herho, Iwan P. Anwar, Faruq Khadami, Alfita P. Handayani,
+Sandy H. S. Herho, 
+Faizal A. R. Abdullah, Iwan P. Anwar, Faruq Khadami, Alfita P. Handayani,
 Karina A. Sujatmiko, Rusmawan Suwarman, and Dasapta E. Irawan
 
 Correspondence: Sandy H. S. Herho — <sh001@ucr.edu>
