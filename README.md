@@ -92,15 +92,8 @@ and distributed through the OSF archive.
 
 ## Authors
 
-<<<<<<< HEAD
-Sandy H. S. Herho, Dasapta E. Irawan, Agus W. Jatmiko, Sito F. Biosa,
-Candrasa Surya Dharma, Edi Riawan, Astyka Pamumpuni, Rendy D. Kartiko,
-Rusmawan Suwarman, and Deny J. Puradimaja.
-=======
-Sandy H. S. Herho, 
-Faizal A. R. Abdullah, Iwan P. Anwar, Faruq Khadami, Alfita P. Handayani,
+Sandy H. S. Herho, Faizal A. R. Abdullah, Iwan P. Anwar, Faruq Khadami, Alfita P. Handayani,
 Karina A. Sujatmiko, Rusmawan Suwarman, and Dasapta E. Irawan
->>>>>>> 445f593e7183651509534d69c80dd7a272046860
 
 Correspondence: Sandy H. S. Herho — <sandy.herho@email.ucr.edu>
 
