@@ -1,4 +1,6 @@
-# Supplementary Analysis Scripts: *Delayed buoyancy control in underwater diving as a nonlinear dynamical system: porpoising, runaway, and information-theoretic diagnostics*
+# Supplementary Analysis Scripts
+
+### *Delayed buoyancy control in underwater diving as a nonlinear dynamical system: porpoising, runaway, and information-theoretic diagnostics*
 
 This repository holds the analysis scripts that produce every computed figure and
 numerical report of the accompanying manuscript. The study is analysis-only: a
@@ -26,8 +28,8 @@ to `../calculations/`.
 | `safe_envelope.py` | 6 | Bounded versus runaway initial conditions in the depth-error and velocity plane for each diver, from a vectorised ensemble integration; 2×2 panel |
 | `complexity_entropy.py` | 7 | Bandt-Pompe permutation entropy and Rosso statistical complexity of the regimes on the plane with theoretical bounds, and their drift along a delay ramp; 1×2 panel |
 | `early_warning.py` | 8 | Critical slowing down approaching onset: lag-one autocorrelation, variance, and measured recovery rate against the spectral abscissa; 2×2 panel |
-| `sensitivity.py` | 9 | Central-difference semi-elasticities of the spectral abscissa and the critical delay to the physical parameters, ranked; 1×2 tornado panel |
-| `robustness.py` | 10 | Ordinal separation of hover and porpoising under observational noise, and the low-pass depth response to breathing forcing; 2×2 panel |
+| `sensitivity.py` | S1 | Central-difference semi-elasticities of the spectral abscissa and the critical delay to the physical parameters, ranked; 1×2 tornado panel |
+| `robustness.py` | S2 | Ordinal separation of hover and porpoising under observational noise, and the low-pass depth response to breathing forcing; 2×2 panel |
 
 ## Four canonical divers
 
@@ -90,10 +92,11 @@ and distributed through the OSF archive.
 
 ## Authors
 
-Sandy H. S. Herho, Iwan P. Anwar, Faruq Khadami, Alfita P. Handayani,
-Karina A. Sujatmiko, Rusmawan Suwarman, and Dasapta E. Irawan
+Sandy H. S. Herho, Dasapta E. Irawan, Agus W. Jatmiko, Sito F. Biosa,
+Candrasa Surya Dharma, Edi Riawan, Astyka Pamumpuni, Rendy D. Kartiko,
+Rusmawan Suwarman, and Deny J. Puradimaja.
 
-Correspondence: Sandy H. S. Herho — <sh001@ucr.edu>
+Correspondence: Sandy H. S. Herho — <sandy.herho@email.ucr.edu>
 
 ## License
 
