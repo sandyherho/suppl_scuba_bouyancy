@@ -2,6 +2,9 @@
 
 ### *An idealized delay-differential model of scuba diver porpoising and runaway ascent*
 
+[![DOI](https://zenodo.org/badge/1325460305.svg)](https://doi.org/10.5281/zenodo.21940225)
+
+
 This repository holds the analysis scripts that produce every computed figure and
 numerical report of the accompanying manuscript. The study is analysis-only: a
 diver stabilizing an inherently unstable buoyancy equilibrium under sensorimotor
