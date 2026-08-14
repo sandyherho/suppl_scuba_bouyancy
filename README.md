@@ -1,6 +1,6 @@
 # Supplementary Scripts
 
-### *Scuba diver porpoising as a delay-induced Hopf bifurcation: an idealized model*
+### *An idealized delay-differential model of scuba diver porpoising and runaway ascent*
 
 This repository holds the analysis scripts that produce every computed figure and
 numerical report of the accompanying manuscript. The study is analysis-only: a
@@ -14,58 +14,49 @@ it and is independently runnable.
 
 ## Model and governing equations
 
-A diver at depth `z` (positive downward) holds a neutral hover that is inherently
+A diver at depth $z$ (positive downward) holds a neutral hover that is inherently
 unstable: the carried gas (wetsuit or drysuit plus buoyancy compensator)
 compresses with depth by Boyle's law, so the buoyant force weakens as the diver
 sinks and strengthens as the diver rises. The vertical force balance, with
-effective mass `m_eff`, net weight excess `Δ = m g − ρ g V_inc`, compressible
-buoyancy referenced to its surface volume `G_surf`, and linear-plus-quadratic
-drag, is
+effective mass $m_\mathrm{eff}$, net weight excess $\Delta = m g - \rho g V_\mathrm{inc}$,
+compressible buoyancy referenced to its surface volume $G_\mathrm{surf}$, and
+linear-plus-quadratic drag, is
 
-```
-m_eff z'' = Δ − ρ g G_surf P0 / P(z) − c1 z' − ½ ρ C_d S |z'| z',      P(z) = P0 + ρ g z.
-```
+$$m_\mathrm{eff}\,\ddot z = \Delta - \rho g\,G_\mathrm{surf}\,\frac{P_0}{P(z)} - c_1 \dot z - \tfrac{1}{2}\rho\,C_d\,S\,|\dot z|\,\dot z, \qquad P(z) = P_0 + \rho g z.$$
 
-The diver regulates the compensator gas after a finite reaction delay `τ` through
-a proportional-derivative law,
+The diver regulates the compensator gas after a finite reaction delay $\tau$
+through a proportional-derivative law,
 
-```
-q(t) = q* + kp ( z(t−τ) − z* ) + kd z'(t−τ),     clamped to [0, q_max].
-```
+$$q(t) = q^\ast + k_p\,\bigl(z(t-\tau) - z^\ast\bigr) + k_d\,\dot z(t-\tau), \qquad \text{clamped to } [0, q_\mathrm{max}].$$
 
-Linearizing about the neutral state `z*` gives a negative (destabilizing)
-stiffness `β = (ρ g)² G* P0 / P_z²`, a control authority `γ = ρ g P0 / P_z`, and
-an instability rate `ω0 = sqrt(β / m_eff)`. In nondimensional time `s = ω0 t`
+Linearizing about the neutral state $z^\ast$ gives a negative (destabilizing)
+stiffness $\beta = (\rho g)^2 G^\ast P_0 / P_z^2$, a control authority
+$\gamma = \rho g P_0 / P_z$, and an instability rate
+$\omega_0 = \sqrt{\beta / m_\mathrm{eff}}$. In nondimensional time $s = \omega_0 t$
 the closed loop reduces to the delay differential equation
 
-```
-x'' + 2 ζ x' − x + κ_p x(s − θ) + κ_d x'(s − θ) = 0,
-```
+$$x'' + 2\zeta\,x' - x + \kappa_p\,x(s-\theta) + \kappa_d\,x'(s-\theta) = 0,$$
 
 with the four dimensionless groups
 
-```
-ζ = c1 / (2 m_eff ω0),   κ_p = γ kp / β,   κ_d = γ kd ω0 / β,   θ = ω0 τ.
-```
+$$\zeta = \frac{c_1}{2 m_\mathrm{eff}\,\omega_0}, \qquad \kappa_p = \frac{\gamma k_p}{\beta}, \qquad \kappa_d = \frac{\gamma k_d\,\omega_0}{\beta}, \qquad \theta = \omega_0\,\tau.$$
 
 Its characteristic function is the quasi-polynomial
 
-```
-χ(μ) = μ² + 2 ζ μ − 1 + ( κ_p + κ_d μ ) e^(−μ θ) = 0,
-```
+$$\chi(\mu) = \mu^2 + 2\zeta\mu - 1 + \bigl(\kappa_p + \kappa_d\mu\bigr)e^{-\mu\theta} = 0,$$
 
-whose rightmost root governs stability. With the gas frozen the plant is a
-saddle (`x'' + 2 ζ x' − x = 0`), so any oscillation is generated entirely by the
+whose rightmost root governs stability. With the gas frozen the plant is a saddle
+($x'' + 2\zeta x' - x = 0$), so any oscillation is generated entirely by the
 delayed control, and porpoising sets in through a supercritical Hopf bifurcation
-as `θ` (or the gain) grows.
+as $\theta$ (or the gain) grows.
 
 ## Gold-standard numerics
 
 - **Stability spectrum:** pseudospectral discretization of the infinitesimal
   generator of the solution semigroup on Chebyshev-Gauss-Lobatto nodes, after
-  Breda, Maset, and Vermiglio. The rightmost roots of `χ(μ)` are recovered as
-  eigenvalues of a finite matrix and converge spectrally; they agree with a
-  direct Newton solution to a residual of order `1e-13`.
+  Breda, Maset, and Vermiglio. The rightmost roots of $\chi(\mu)$ are recovered
+  as eigenvalues of a finite matrix and converge spectrally; they agree with a
+  direct Newton solution to a residual of order $10^{-13}$.
 - **Time integration:** fourth-order Runge-Kutta method of steps on a grid whose
   spacing divides the delay, with interior-stage delayed values supplied by the
   cubic Hermite continuous extension. The saturation on the compensator gas is
@@ -158,7 +149,7 @@ and distributed through the OSF archive.
 Sandy H. S. Herho, Faizal A. R. Abdullah, Iwan P. Anwar, Faruq Khadami, Alfita P. Handayani,
 Karina A. Sujatmiko, Rusmawan Suwarman, and Dasapta E. Irawan
 
-Correspondence: Sandy H. S. Herho — <sandy.herho@email.ucr.edu>
+Correspondence: Sandy H. S. Herho — <sandyherho@itb.ac.id>
 
 ## License
 
