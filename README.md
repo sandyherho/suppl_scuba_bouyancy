@@ -2,6 +2,7 @@
 
 ### *An idealized delay-differential model of scuba diver porpoising and runaway ascent*
 
+[![arXiv](https://img.shields.io/badge/arXiv-2603.13715-b31b1b.svg?style=flat-square)](https://doi.org/10.48550/arXiv.2608.14978)
 [![DOI](https://zenodo.org/badge/1325460305.svg)](https://doi.org/10.5281/zenodo.21940225)
 
 
